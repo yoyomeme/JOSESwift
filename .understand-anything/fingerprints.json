@@ -1,0 +1,2010 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "ee94ae79c5a5e5d53a206d4f9b7bdb93b3b77d60",
+  "generatedAt": "2026-05-26T14:52:21.673Z",
+  "files": {
+    ".circleci/config.yml": {
+      "filePath": ".circleci/config.yml",
+      "contentHash": "ec3e7fa97f2521295bdeb41a5d1976ecc0ec3bc9435486e21721ada00140fd9e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 115,
+      "hasStructuralAnalysis": true
+    },
+    ".github/CODE_OF_CONDUCT.md": {
+      "filePath": ".github/CODE_OF_CONDUCT.md",
+      "contentHash": "6f5595c613920c53afb43a6154326832117d823954f36022ca0cee60be41c584",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": true
+    },
+    ".github/CONTRIBUTING.md": {
+      "filePath": ".github/CONTRIBUTING.md",
+      "contentHash": "858459955b354bb30adf3492bdaf29606268328a32b40eccc96017d105abfa8b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    ".github/renovate.json": {
+      "filePath": ".github/renovate.json",
+      "contentHash": "03f830265a523fd54676f2922cf633dda315566b251506d1aed0adbe5405f169",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    ".ruby-version": {
+      "filePath": ".ruby-version",
+      "contentHash": "5eee6c0c5c6901f5e523f0a434bca4106e1ff7136deb451f982b0bb1a7b13716",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".swift-version": {
+      "filePath": ".swift-version",
+      "contentHash": "2633b735e2a5a87c5a4231586634df455041cae204e10a607f96c91f89b671ec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".swiftformat": {
+      "filePath": ".swiftformat",
+      "contentHash": "8edcbad463b8b7771add940f91c50f3b0416d22327dce27b3418b6aad685d117",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".swiftlint.yml": {
+      "filePath": ".swiftlint.yml",
+      "contentHash": "bb57f7ebd1d8208a19ab155c804fd01b6434c7fb16ceda9c4bffef6fa7e84a4f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "BuildTools/Empty.swift": {
+      "filePath": "BuildTools/Empty.swift",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "BuildTools/Package.resolved": {
+      "filePath": "BuildTools/Package.resolved",
+      "contentHash": "a9632b200c9117167d4995dffc82d2cbeb8143f7ae31ff27b9063b719b214da8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "BuildTools/Package.swift": {
+      "filePath": "BuildTools/Package.swift",
+      "contentHash": "7b73bbf11f3b4f1b8279e44e93e6fa954646945eef8be3681a467569c4f69414",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "BuildTools/README.md": {
+      "filePath": "BuildTools/README.md",
+      "contentHash": "e0cc5e28891453841dd5861a291c9d3ef1b7b27cb949edc7534791e547913923",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    "CHANGELOG.md": {
+      "filePath": "CHANGELOG.md",
+      "contentHash": "259410b13f0796410f243a889ea2b9dd0181c574a99e5dea9c08a14c7fa938a7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 124,
+      "hasStructuralAnalysis": true
+    },
+    "fastlane/Fastfile": {
+      "filePath": "fastlane/Fastfile",
+      "contentHash": "f27deba77b61ca2007c5113d94ac748de01be7681cbff4ba44319827d022c1ac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 253,
+      "hasStructuralAnalysis": false
+    },
+    "Gemfile": {
+      "filePath": "Gemfile",
+      "contentHash": "7c08eb542b1d7a376019c24a8db2dcdd302c8dd9407c7b6a5f6aaf8c098b2e8f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift.podspec": {
+      "filePath": "JOSESwift.podspec",
+      "contentHash": "3c697890b831de61debfb5fd6bf1ed7b08d36f4231f8dfd0581b712113b231c7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift.xcodeproj/project.pbxproj": {
+      "filePath": "JOSESwift.xcodeproj/project.pbxproj",
+      "contentHash": "62d2b3a28d9de8f46878d6fa3c739fc83769611167f2844f38dd7e03baf2aa74",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1394,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift.xcodeproj/project.xcworkspace/contents.xcworkspacedata": {
+      "filePath": "JOSESwift.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "contentHash": "ac2b2b061ab74765e82a2d3ef1f8b8f4cd5a174bb50b2f2638c167ca82689888",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift.xcodeproj/xcshareddata/xcschemes/JOSESwift.xcscheme": {
+      "filePath": "JOSESwift.xcodeproj/xcshareddata/xcschemes/JOSESwift.xcscheme",
+      "contentHash": "874ff0ba2ad84df95bb46ff08d59e86f36707df095dbc7f8a1a213edc85556e1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 102,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift.xcodeproj/xcshareddata/xcschemes/Tests.xcscheme": {
+      "filePath": "JOSESwift.xcodeproj/xcshareddata/xcschemes/Tests.xcscheme",
+      "contentHash": "ab5a11cb375c12f98568bbfa3ebb9e725c43228299d2aca65eea8394cb8f0bbc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift.xcworkspace/contents.xcworkspacedata": {
+      "filePath": "JOSESwift.xcworkspace/contents.xcworkspacedata",
+      "contentHash": "8b9e4f00b54bcfd1354902937d152b7605b1cb8c6699b6046134d95e0a759b4a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": {
+      "filePath": "JOSESwift.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "contentHash": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/AlgorithmExtensions.swift": {
+      "filePath": "JOSESwift/Sources/Common/AlgorithmExtensions.swift",
+      "contentHash": "d753d76c0ff74d1d7d17c8b807c40d57602673776bd028fb82254ac6bd930ff5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 100,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/Algorithms.swift": {
+      "filePath": "JOSESwift/Sources/Common/Algorithms.swift",
+      "contentHash": "88e49379ff9682c91a3e637eb3045bd825fedc13d2da5765be98318cf225c463",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 203,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/ASN1DEREncoding.swift": {
+      "filePath": "JOSESwift/Sources/Common/ASN1DEREncoding.swift",
+      "contentHash": "90d24ba45214e5503ace49584373c96099d4b09abfa6c2df33879f9b7e738f21",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/ASN1DERParsing.swift": {
+      "filePath": "JOSESwift/Sources/Common/ASN1DERParsing.swift",
+      "contentHash": "ce28d5a26cedcc039cb6410411e38ac450277105c29561aea6e8b4a5c9981efd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 227,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/DataConvertible.swift": {
+      "filePath": "JOSESwift/Sources/Common/DataConvertible.swift",
+      "contentHash": "ef2faf75c9d348b85e55caa981efb33be13257938b079bb5a56740a07d0736f8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 30,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/DataExtensions.swift": {
+      "filePath": "JOSESwift/Sources/Common/DataExtensions.swift",
+      "contentHash": "5b3592975c64566a8705c83d8005135c671169054255b3f2b7f9739e34df78e8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 149,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/Deserializer.swift": {
+      "filePath": "JOSESwift/Sources/Common/Deserializer.swift",
+      "contentHash": "7743a86217b9a16725a8010ee66bd3bc168a52a10f1e4356462392a2a9fdb84a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 81,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/JOSEHeader.swift": {
+      "filePath": "JOSESwift/Sources/Common/JOSEHeader.swift",
+      "contentHash": "93f6f920c35067c8577c1940202150fc2b25faf6d4b2b08064239213822b7365",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 105,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/JOSESwiftError.swift": {
+      "filePath": "JOSESwift/Sources/Common/JOSESwiftError.swift",
+      "contentHash": "f43e51471721a3ba8c16812a3bb90419f75d52f799dc624eedc7cc0cce9930c4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 74,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/Payload.swift": {
+      "filePath": "JOSESwift/Sources/Common/Payload.swift",
+      "contentHash": "84a25489dc738fd78246fa078e8049e1ddae22b38e45ab67cfc107b0431de701",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/Common/Serializer.swift": {
+      "filePath": "JOSESwift/Sources/Common/Serializer.swift",
+      "contentHash": "638e075b8eb42c9585d68d159cd596ca5d5a477caf24abbea65539607bf9e541",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/AESCBC/AES.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/AESCBC/AES.swift",
+      "contentHash": "a9ec6c0882a03d919cebad1861aae9bb2c00302f606f713e0a81109c6ce0c1a8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 370,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/AESGCM/AESGCM.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/AESGCM/AESGCM.swift",
+      "contentHash": "8e122fbaf43ea658eeda0963be725a99e0eefb0f451cb476cb9e51f32700e6c9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/EC/EC.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/EC/EC.swift",
+      "contentHash": "8f52f762e71f02552cdc2ec1a7f72ed973598524afd812613668703fbfce67cf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 372,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/EC/ECDHKeyAgreement.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/EC/ECDHKeyAgreement.swift",
+      "contentHash": "30f97794563d5c311c4cc3ca388eb0110ef21204270dc897ffac343cd4675b43",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 220,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/HMAC/HMAC.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/HMAC/HMAC.swift",
+      "contentHash": "b38335bfb4a0c50d2691135da3bd18b23a31e9ea7a6da27fc8a0e882632a37be",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/PBES2/PBES2.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/PBES2/PBES2.swift",
+      "contentHash": "2334dbe7e970adb09e635d678b0204b471a01472900c54942c1d2681f08d14b1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/Randomness/SecureRandom.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/Randomness/SecureRandom.swift",
+      "contentHash": "51f5bc71f9e7a15619f99a43e1ffcc72cf5ee42c374717f204a855382b31578e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/RSA/RSA.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/RSA/RSA.swift",
+      "contentHash": "d54c126e1509b5078deb4a2287c1820785eb420700a074ec1e9fa08d50f7aeed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 299,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/CryptoPrimitives/SHA/Thumbprint.swift": {
+      "filePath": "JOSESwift/Sources/CryptoPrimitives/SHA/Thumbprint.swift",
+      "contentHash": "b2690de3a0d234a17006a32155c4e75971a73965ae5f94bb4a036e6df7febe7c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 69,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/Compression/Compressor.swift": {
+      "filePath": "JOSESwift/Sources/JWE/Compression/Compressor.swift",
+      "contentHash": "0b39e157a8c26381f0a5c01b0a3d7e93ac11c5faef70cefa0fc25179f8982495",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/Compression/DeflateWrapper.swift": {
+      "filePath": "JOSESwift/Sources/JWE/Compression/DeflateWrapper.swift",
+      "contentHash": "59290fa30933fc835eecfb5fd22c549f693a89656bd54874a50a4d16ea3815c9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 119,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/ContentEncryption/ContentEncryption.swift": {
+      "filePath": "JOSESwift/Sources/JWE/ContentEncryption/ContentEncryption.swift",
+      "contentHash": "5240375b9417e1aeab5bae8efe74d455e70d22d5c6075b4e0653804d957977f5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/ContentEncryption/DefaultCrypto/AESCBC/AESCBCEncryption.swift": {
+      "filePath": "JOSESwift/Sources/JWE/ContentEncryption/DefaultCrypto/AESCBC/AESCBCEncryption.swift",
+      "contentHash": "9bf99175e23770d38197f27235ef9bf3d345b700894a213af24249b1c58ca666",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 181,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/ContentEncryption/DefaultCrypto/AESGCM/AESGCMEncryption.swift": {
+      "filePath": "JOSESwift/Sources/JWE/ContentEncryption/DefaultCrypto/AESGCM/AESGCMEncryption.swift",
+      "contentHash": "1b427cd2c5ae13e720dfb37d22b7a069b8547ae4c329c078773e7079d1b96ed9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 84,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/Decrypter.swift": {
+      "filePath": "JOSESwift/Sources/JWE/Decrypter.swift",
+      "contentHash": "d2c7b6c961d1cdfa1dcac38a4d9895c072025d86f61f1419989dd9a42a1f31c3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 113,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/Encrypter.swift": {
+      "filePath": "JOSESwift/Sources/JWE/Encrypter.swift",
+      "contentHash": "8439bdc440ae303bc0cf391b9ce530af32934e2c0937d5501988b4bf0fde52b3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 122,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/JWE.swift": {
+      "filePath": "JOSESwift/Sources/JWE/JWE.swift",
+      "contentHash": "8d06f917c4c377e48bdb4bb43c1f0e487f2ed19c66f3498e5f1c5ecce08ff068",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 196,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/JWEHeader.swift": {
+      "filePath": "JOSESwift/Sources/JWE/JWEHeader.swift",
+      "contentHash": "716b536a7789b58264376891ab8a54a0db388ab96d74d8595a8dd35526a69e5d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 365,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/AESKW/AESKeyWrappingMode.swift": {
+      "filePath": "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/AESKW/AESKeyWrappingMode.swift",
+      "contentHash": "0a13b5d2abfbe8b9af2059c78d644ecb05fa55ce3d18293d0df7e58924fd23a7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/DirectEncryption/DirectEncryptionMode.swift": {
+      "filePath": "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/DirectEncryption/DirectEncryptionMode.swift",
+      "contentHash": "c9fe4f262f0ed19899836a44b623ad356f24ef2d7c7f7b3eaa49cdd2cb27e48a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/EC/ECKeyEncryption.swift": {
+      "filePath": "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/EC/ECKeyEncryption.swift",
+      "contentHash": "23fa5cc4db8ca0283afaa49f3c95a9b1e5f6a24a0deb6e42be9f394ef81ef269",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 119,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/PBES2/PBES2KeyEncryptionMode.swift": {
+      "filePath": "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/PBES2/PBES2KeyEncryptionMode.swift",
+      "contentHash": "a546377d0ed2e958a6beb570a11f0e3b50e1f4968e90fd9683cc45eb63ec6a5e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 106,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/RSA/RSAKeyEncryptionMode.swift": {
+      "filePath": "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/RSA/RSAKeyEncryptionMode.swift",
+      "contentHash": "9f6db56c2cad07540deaf97fe0e5e0b547ad384cca1a090a61484c7956aae4fd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 106,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWE/KeyManagement/KeyManagementMode.swift": {
+      "filePath": "JOSESwift/Sources/JWE/KeyManagement/KeyManagementMode.swift",
+      "contentHash": "21452c855cc05d86e98ca6904599d6a2848548e3a2e051f9c5780b6038c99775",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 165,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/EC/DataECPrivateKey.swift": {
+      "filePath": "JOSESwift/Sources/JWK/EC/DataECPrivateKey.swift",
+      "contentHash": "ac0b5c1a3cebb800af3add06c803a2571299238bb3ad3b0d6ce4c5aa799a075e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/EC/DataECPublicKey.swift": {
+      "filePath": "JOSESwift/Sources/JWK/EC/DataECPublicKey.swift",
+      "contentHash": "361daa52878fc85155fd99f2266337ab7b6ca255a8dc3d4118a3b8ab6d08f3c8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/EC/ECKeyCodable.swift": {
+      "filePath": "JOSESwift/Sources/JWK/EC/ECKeyCodable.swift",
+      "contentHash": "f849285ba635edfb05c0cecc157cc70675801821493d64090529e90e6f5133a3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 146,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/EC/ECKeyPair.swift": {
+      "filePath": "JOSESwift/Sources/JWK/EC/ECKeyPair.swift",
+      "contentHash": "3cf15745461738d5f13f5f56d47ab8773f0e2a1c599e714e00f7f912b2507df3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/EC/ECKeys.swift": {
+      "filePath": "JOSESwift/Sources/JWK/EC/ECKeys.swift",
+      "contentHash": "40d2ac8dbccef6ae3d7b7330eea16c45d471ec8abb7483f87f3a084a21ae6767",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 345,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/EC/SecKeyECPrivateKey.swift": {
+      "filePath": "JOSESwift/Sources/JWK/EC/SecKeyECPrivateKey.swift",
+      "contentHash": "e8b9237c257ece1e47b7cd6da89819388a63aa78787e55a4997eaf84ad77a242",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/EC/SecKeyECPublicKey.swift": {
+      "filePath": "JOSESwift/Sources/JWK/EC/SecKeyECPublicKey.swift",
+      "contentHash": "ecf91a56c57688e8e8f1ee970a97d549bd51ce23f466a2a30f6a22d197e58a30",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/JWK.swift": {
+      "filePath": "JOSESwift/Sources/JWK/JWK.swift",
+      "contentHash": "75f3ec4ca053e4feb4e0024a2348239215ef7f80d78715f0a244a10bee4a6793",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 124,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/JWKExtensions.swift": {
+      "filePath": "JOSESwift/Sources/JWK/JWKExtensions.swift",
+      "contentHash": "d760fcd065536bcbb342b947724a9a23635db85e3c30606c544a1ff62186d7d4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/JWKParameters.swift": {
+      "filePath": "JOSESwift/Sources/JWK/JWKParameters.swift",
+      "contentHash": "2aad329cd0f1966c49469fa771d8cd41163cc75ce12d9c9701e6639528c3d892",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/JWKSet.swift": {
+      "filePath": "JOSESwift/Sources/JWK/JWKSet.swift",
+      "contentHash": "92f94357963ddda9e61be72670abfb4a8a8492320b7f320073dff48f3312adca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 110,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/JWKSetCodable.swift": {
+      "filePath": "JOSESwift/Sources/JWK/JWKSetCodable.swift",
+      "contentHash": "737f640848301ba5d2a6b4cc9f2766c3359bdbbf1c7d310ba56e72bf88947e3b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 145,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/RSA/DataRSAPublicKey.swift": {
+      "filePath": "JOSESwift/Sources/JWK/RSA/DataRSAPublicKey.swift",
+      "contentHash": "d89af42b75459a33743d1cba90ed35ce36a726d686c496ee7c1c66ecf3cc7dee",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/RSA/RSAKeyCodable.swift": {
+      "filePath": "JOSESwift/Sources/JWK/RSA/RSAKeyCodable.swift",
+      "contentHash": "c37f5e2ab09b6ab3771d59786e165d7ba2a8323ac475dea4cc78085009a9dbd3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 140,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/RSA/RSAKeys.swift": {
+      "filePath": "JOSESwift/Sources/JWK/RSA/RSAKeys.swift",
+      "contentHash": "fd9ce6976ade1461419bef1719e49057d7c716ac3926ee5a0687ac4bb5e8a9a5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 315,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/RSA/SecKeyRSAPublicKey.swift": {
+      "filePath": "JOSESwift/Sources/JWK/RSA/SecKeyRSAPublicKey.swift",
+      "contentHash": "d0e01e20308d32a38a057d2a46cfd4c0bbae73c149b7a92c8ca4bdb882e95c1b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/Symmetric/DataSymmetricKey.swift": {
+      "filePath": "JOSESwift/Sources/JWK/Symmetric/DataSymmetricKey.swift",
+      "contentHash": "9183876af432b8532072e3ed03399d32fc527821a604281d73eac720929551d0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/Symmetric/SymmetricKeyCodable.swift": {
+      "filePath": "JOSESwift/Sources/JWK/Symmetric/SymmetricKeyCodable.swift",
+      "contentHash": "6df2551596e065aa52cae639974f741bbc7245fc0e9a252b4e76c009b6f2bc2c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWK/Symmetric/SymmetricKeys.swift": {
+      "filePath": "JOSESwift/Sources/JWK/Symmetric/SymmetricKeys.swift",
+      "contentHash": "3991e098f9c924e87078126169b27e93c7501982081427de6a04ac6da2bf5631",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 138,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/DefaultCrypto/EC/ECSigner.swift": {
+      "filePath": "JOSESwift/Sources/JWS/DefaultCrypto/EC/ECSigner.swift",
+      "contentHash": "921a08e0c5ce7fb7f91ef558dd55777f7fdba14f3140ca325a5ecefa77d1baa3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/DefaultCrypto/EC/ECVerifier.swift": {
+      "filePath": "JOSESwift/Sources/JWS/DefaultCrypto/EC/ECVerifier.swift",
+      "contentHash": "282cf31deb812d8b12c10eb09a343fd5a36f13e78c24e4555a91ce224e4fb119",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/DefaultCrypto/HMAC/HMACSigner.swift": {
+      "filePath": "JOSESwift/Sources/JWS/DefaultCrypto/HMAC/HMACSigner.swift",
+      "contentHash": "db18625e8af8e31ba18910699ce951c4d4fb16feb70420f6656ec29db24c4168",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/DefaultCrypto/HMAC/HMACVerifier.swift": {
+      "filePath": "JOSESwift/Sources/JWS/DefaultCrypto/HMAC/HMACVerifier.swift",
+      "contentHash": "8aec1515ded68bd01c3dc2b551249649ec020ea8db3f80fb6abbe30c5b237638",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/DefaultCrypto/RSA/RSASigner.swift": {
+      "filePath": "JOSESwift/Sources/JWS/DefaultCrypto/RSA/RSASigner.swift",
+      "contentHash": "8df16baddaa560ea9d38b449bc17bbe9e65326ea55722da7d44010291c71f392",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/DefaultCrypto/RSA/RSAVerifier.swift": {
+      "filePath": "JOSESwift/Sources/JWS/DefaultCrypto/RSA/RSAVerifier.swift",
+      "contentHash": "0d522e85d714e1d064a76725d832194bd742a1abaf90d1a7c5383263d9b9e0a7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/JWS.swift": {
+      "filePath": "JOSESwift/Sources/JWS/JWS.swift",
+      "contentHash": "ba3887d5f7736d1e6fbe1e29a1de2174686236feb40af130487665f0a854bcc9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 177,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/JWSHeader.swift": {
+      "filePath": "JOSESwift/Sources/JWS/JWSHeader.swift",
+      "contentHash": "dba0fcf876341c0d5dcd0ba8a7c0bb13b1c739e3802d054e8f5b42ddde283448",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 241,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/Signer.swift": {
+      "filePath": "JOSESwift/Sources/JWS/Signer.swift",
+      "contentHash": "9a90e65f134ae42dc5b72acc345f8bfab2c36ef2f590cdda481225911920c9ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 108,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Sources/JWS/Verifier.swift": {
+      "filePath": "JOSESwift/Sources/JWS/Verifier.swift",
+      "contentHash": "70ed490b923174c5ccc1b3f79186143da03d3e53857d0f9c6df5705fd574585f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Support/Info.plist": {
+      "filePath": "JOSESwift/Support/Info.plist",
+      "contentHash": "027a23024f0fd542a3f73e26008b85f5c67ce9ac46ba1844a504d36d33ea5c49",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "JOSESwift/Support/JOSESwift.h": {
+      "filePath": "JOSESwift/Support/JOSESwift.h",
+      "contentHash": "aab75b96a996dfa5bb61712cbb244bc97b4e6ff62f6a7cc19b610820100d7fd1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "keys/message.txt": {
+      "filePath": "keys/message.txt",
+      "contentHash": "20e890cd07f2a02d44f91a7fa617de11c040a8e6b7ab19a906ac4e1bd71e9a7f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.d.key": {
+      "filePath": "keys/test.ec256.d.key",
+      "contentHash": "9b942a2018996007aaba7fc51fb477ff7564d3405350c82ba06f51f1d211a15f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.durl.key": {
+      "filePath": "keys/test.ec256.durl.key",
+      "contentHash": "5316154b3af798caf3c7ccd4156b7bbbe23ded6a391ffdca28413e69104e9d70",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.key": {
+      "filePath": "keys/test.ec256.key",
+      "contentHash": "865c416cfa1c09b2342c1ec66321eeb06c0be218bb42c2e1271003a815f4da01",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.keyparam": {
+      "filePath": "keys/test.ec256.keyparam",
+      "contentHash": "898060b4029e87abe913a1469ad502747638f82d02d900eaf8e3705245b290b4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.pub.key": {
+      "filePath": "keys/test.ec256.pub.key",
+      "contentHash": "33e1875df991269ddedf7112a60b32c4e088ea3a675711003b18ee827975f421",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.pub.x.key": {
+      "filePath": "keys/test.ec256.pub.x.key",
+      "contentHash": "d022b1b1bdfb7b5b6c22d11ca1ccb1cfd4174728b1bcadc4f051dc54c15ceb4b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.pub.xurl.key": {
+      "filePath": "keys/test.ec256.pub.xurl.key",
+      "contentHash": "24e9832b7e0be20b7dfe0d3c51d3daf475600a32eb919eb32889aad189a0a085",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.pub.y.key": {
+      "filePath": "keys/test.ec256.pub.y.key",
+      "contentHash": "c8d9a7c577cfcd48e72829acb9687f8c5cf080abb062dbda43dfe245a77ca2f8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.pub.yurl.key": {
+      "filePath": "keys/test.ec256.pub.yurl.key",
+      "contentHash": "542f12fddc04f8e381c8b536c9ac0622ef47a10f3e70e9618e210e0895c675e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.sig": {
+      "filePath": "keys/test.ec256.sig",
+      "contentHash": "f7cf242ccf18264a53c33b1b043f175dc8c4b982ae6b0135b1541172f234eca7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec256.sig.b64": {
+      "filePath": "keys/test.ec256.sig.b64",
+      "contentHash": "227edb9ab054924be351a216afc26cb9f6a0d5ed5e0d19e4a716d07f43e0f37c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.d.key": {
+      "filePath": "keys/test.ec384.d.key",
+      "contentHash": "5a1fd681c3c56db5e678dd28e61f085c28b52c91720f049d6afee547f4ad3535",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.durl.key": {
+      "filePath": "keys/test.ec384.durl.key",
+      "contentHash": "2b0c33350ce3b1336dfd99a0d8e7017a72e583afd5aa5bf0a20b3d36adf10265",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.key": {
+      "filePath": "keys/test.ec384.key",
+      "contentHash": "2863c62f17bb041998287220bbd69765db157ef89df552a7361b02fc2c0e1e79",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.keyparam": {
+      "filePath": "keys/test.ec384.keyparam",
+      "contentHash": "5aecc5c64571b23733e587d9436e381dd245e96794e0f3855e20a4792e09b5cb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.pub.key": {
+      "filePath": "keys/test.ec384.pub.key",
+      "contentHash": "0ee24cbb59ad2906c545d829325c29d5c474422c60ad428f9d8a05d52e689598",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.pub.x.key": {
+      "filePath": "keys/test.ec384.pub.x.key",
+      "contentHash": "1fc895a24bcf8fa79c277284513b37ba7d80c4f35d381bfae5c4336f8fb3f3ed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.pub.xurl.key": {
+      "filePath": "keys/test.ec384.pub.xurl.key",
+      "contentHash": "e407e39a40ff0849004862ff958b02c3ba6643faf23da297dcb92b54807572d7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.pub.y.key": {
+      "filePath": "keys/test.ec384.pub.y.key",
+      "contentHash": "8c45330ae7c089369e0c264ffcab5522ab04717f4d1f7f3e412fd9f997bbf343",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.pub.yurl.key": {
+      "filePath": "keys/test.ec384.pub.yurl.key",
+      "contentHash": "3ccf224f7aa7d1280465e8d7fd1fb7f5d1bb7cae4071933edb0555f5c1df54da",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.sig": {
+      "filePath": "keys/test.ec384.sig",
+      "contentHash": "bd88fb384141e4a94067c3bc9819a1ad667391e5e31cb43e696d87a2fa941895",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec384.sig.b64": {
+      "filePath": "keys/test.ec384.sig.b64",
+      "contentHash": "9df32635cec10f424cd22210567833b2d91b784972b0be9559da4f9bb4e4140b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.d.key": {
+      "filePath": "keys/test.ec521.d.key",
+      "contentHash": "8d7299ca090d88443d8bbcebaea9384fecdb77bb214d9b4853cda8715331936b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.durl.key": {
+      "filePath": "keys/test.ec521.durl.key",
+      "contentHash": "fa3876cf72151c54327f3d80ff569b7b9a373a2ada998dec94e5a2704c8b4f02",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.key": {
+      "filePath": "keys/test.ec521.key",
+      "contentHash": "12f020899f62f7dbc3b3338c24905241fe6f8747ed9a9a880021bdc8fc7577d1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.keyparam": {
+      "filePath": "keys/test.ec521.keyparam",
+      "contentHash": "7c954a4c196035bfd9504cbec19b06ab256613c26437f0d50b0d9d63e0cfbdfa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.pub.key": {
+      "filePath": "keys/test.ec521.pub.key",
+      "contentHash": "15f36a15b2919c010186d8840a7b9ab171b0b046f56d215e11f7f7dbcb78eaae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.pub.x.key": {
+      "filePath": "keys/test.ec521.pub.x.key",
+      "contentHash": "b40cb8f7a2a2fba317959b23b4ada56982bb421c9ce90e071e7d616c7c86bc8f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.pub.xurl.key": {
+      "filePath": "keys/test.ec521.pub.xurl.key",
+      "contentHash": "3871f9160954b602dfdafb589b6d82889580d92b77080df2add15c44a524fa08",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.pub.y.key": {
+      "filePath": "keys/test.ec521.pub.y.key",
+      "contentHash": "7afe6f48ec4d34d295ffd35c832904fcdcd210d96d2aa9b50735b0bb071292c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.pub.yurl.key": {
+      "filePath": "keys/test.ec521.pub.yurl.key",
+      "contentHash": "4ff5f7c1fa2f6aa7d0bf5efc34d3c03564a8d10fef360db5877a00bf41cf0f89",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.sig": {
+      "filePath": "keys/test.ec521.sig",
+      "contentHash": "50e7494df45e5036c7a56427e95194eb77cbeaf19d45044d2d11b5288da363ce",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "keys/test.ec521.sig.b64": {
+      "filePath": "keys/test.ec521.sig.b64",
+      "contentHash": "d3a1852df972302adbec53bd312a3d6ac115f7dac2875245e255cc5bf9f8735a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "Package.swift": {
+      "filePath": "Package.swift",
+      "contentHash": "65bf83983272c578dbf74d8d964b49a140581b18784b46308f9a037daac7c50d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "b6bd678f932bd3da59bef9efb3825a04f29e1daaebaab8c39eb6a3576240ab78",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 423,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/update-license-year.sh": {
+      "filePath": "scripts/update-license-year.sh",
+      "contentHash": "7cefff133900cfa398519add45202c23fec5193a00ff1a92bf0fde1b4300315c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/xccov-to-sonarqube.sh": {
+      "filePath": "scripts/xccov-to-sonarqube.sh",
+      "contentHash": "a4fae74d2a89633f30e5ca57fa2d67c3145ef501040e22efa364a4377431ae47",
+      "functions": [
+        {
+          "name": "convert_file",
+          "params": [],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "xccov_to_generic",
+          "params": [],
+          "exported": false,
+          "lineCount": 9
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": true
+    },
+    "SECURITY.md": {
+      "filePath": "SECURITY.md",
+      "contentHash": "442bba37f0df894acb30c5540e1b4e906eb25004774516cff33554225197f654",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "sonar-project.properties": {
+      "filePath": "sonar-project.properties",
+      "contentHash": "419a3514f9551054587786f41ec647cf2b1ea0b8660fedfb5cae2ed27d229b20",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/AESCBCContentDecryptionTests.swift": {
+      "filePath": "Tests/AESCBCContentDecryptionTests.swift",
+      "contentHash": "55aa22d08222889fd5a9fb8a0de815637861cbf139dedd4f2b1409a5d7a194ec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 172,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/AESCBCContentEncryptionTests.swift": {
+      "filePath": "Tests/AESCBCContentEncryptionTests.swift",
+      "contentHash": "2309d2b649a88db5dfb4eb45c822be1e77252eb4e3b16407f124ff9640f6de2e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 321,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/AESGCMEncryptionTests.swift": {
+      "filePath": "Tests/AESGCMEncryptionTests.swift",
+      "contentHash": "88bfda8c22f6f81a6c4957136bfac344b5ed3531df32138fac7534b50d538a0b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 145,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/AESKeyWrapKeyManagementModeTests.swift": {
+      "filePath": "Tests/AESKeyWrapKeyManagementModeTests.swift",
+      "contentHash": "2c6dc2923160d23d1362c347a981f1d73c6c951a0467a0549bf97faa683e7966",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 261,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/AESKeyWrapTests.swift": {
+      "filePath": "Tests/AESKeyWrapTests.swift",
+      "contentHash": "5ddec2dd405eb0dd6f72f48f36282e9a25f760d3a98b615bbd4b667d1d413ac9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 185,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/alice.pub.pem": {
+      "filePath": "Tests/alice.pub.pem",
+      "contentHash": "7601c6e513dd04a420d490da4df695df7204555c295aa142bfa85ebf57f28ddd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ASN1DEREncodingTests.swift": {
+      "filePath": "Tests/ASN1DEREncodingTests.swift",
+      "contentHash": "6dd13ca288f530ebdc74d64099332c0023021d250fdd8e402b2cb28d5d347e5f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 132,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ASN1DERParsingTests.swift": {
+      "filePath": "Tests/ASN1DERParsingTests.swift",
+      "contentHash": "addc281ff2b1cecc28745801fb53841e3196b170c8627ebe8dfaeb245343242f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 277,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/bob.pub.pem": {
+      "filePath": "Tests/bob.pub.pem",
+      "contentHash": "a50a81d3438b4687662a080fb6dc7628dcfaf16034bd3428951b6e62ea3f2031",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/CryptoTestCase.swift": {
+      "filePath": "Tests/CryptoTestCase.swift",
+      "contentHash": "1960cea47c5b6a47a975fb7c46163d786682fd298de39d36e005e9d000488fbd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 88,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/DataECPrivateKeyTests.swift": {
+      "filePath": "Tests/DataECPrivateKeyTests.swift",
+      "contentHash": "be0271fec8bc306bebbfc3236424fd5a10ec5f0b69955a6e03fd7799f4cc76b3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 138,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/DataECPublicKeyTests.swift": {
+      "filePath": "Tests/DataECPublicKeyTests.swift",
+      "contentHash": "5790712cf7919bceeeff769d0153f8e10b1f54cc39c5414759b15b921e076e37",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 105,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/DataExtensionTests.swift": {
+      "filePath": "Tests/DataExtensionTests.swift",
+      "contentHash": "a66bd71bef54b1c33e446bb56384be49778ce2f070afad5bd531321e0d7b8805",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 180,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/DataRSAPublicKeyTests.swift": {
+      "filePath": "Tests/DataRSAPublicKeyTests.swift",
+      "contentHash": "dc9951f3bfc876ba35ee9ae6e0edd88b5bd729e94f9ec90af4ef569071708e3b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 97,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/DirectEncryptionKeyManagementModeTests.swift": {
+      "filePath": "Tests/DirectEncryptionKeyManagementModeTests.swift",
+      "contentHash": "3a78036af1724c23da2be98014f2ae2dd59027d629a9dcc6e6f820ac32f493cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECAsn1IntegerConversionTests.swift": {
+      "filePath": "Tests/ECAsn1IntegerConversionTests.swift",
+      "contentHash": "f740803e7545ff3249f66fd2a8fd273d435b6907f63da9ff687a792f2f8287a0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 105,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECCryptoTestCase.swift": {
+      "filePath": "Tests/ECCryptoTestCase.swift",
+      "contentHash": "6887e37222ef019def953034b9b6bd003f7ba72448dd5a5b5d171628a0d71970",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 274,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECDHTests.swift": {
+      "filePath": "Tests/ECDHTests.swift",
+      "contentHash": "e6545cc0e41ae162176e4444f906b5e440c2bf382355a8bd34d7b9585b441050",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 244,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECPrivateKeyToDataTests.swift": {
+      "filePath": "Tests/ECPrivateKeyToDataTests.swift",
+      "contentHash": "f19f0436aa28d7e29704b0ec1a21e6b2d2a0de372d2397132e25042278e9d096",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECPrivateKeyToSecKeyTests.swift": {
+      "filePath": "Tests/ECPrivateKeyToSecKeyTests.swift",
+      "contentHash": "eb674019994b7d4cf5f0d54ea27325ca45e324e3733d83660aefdb2080d0dab5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECPublicKeyToDataTests.swift": {
+      "filePath": "Tests/ECPublicKeyToDataTests.swift",
+      "contentHash": "9738ce3067704d12208482f9f29b3811a110e054716294dbcb7aeb030bdefef5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECPublicKeyToSecKeyTests.swift": {
+      "filePath": "Tests/ECPublicKeyToSecKeyTests.swift",
+      "contentHash": "cf0b1ea0ef64747377ee791e7b45dd8fd4473dc6bd7eca463855407c59054930",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECSignerTests.swift": {
+      "filePath": "Tests/ECSignerTests.swift",
+      "contentHash": "a077d9567650f4bc6d404ef227d9728fffc770a025f302a6bddca77e7a0a4aa6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/ECVerifierTests.swift": {
+      "filePath": "Tests/ECVerifierTests.swift",
+      "contentHash": "bea9879d31a7da9129461ab8d9b35faaa39b7ddf69843309158f4c8deff72bd3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/EncrypterDecrypterInitializationTests.swift": {
+      "filePath": "Tests/EncrypterDecrypterInitializationTests.swift",
+      "contentHash": "866d91f8510711da453fbdff316b66d7ce632743a68d0902e2f2c39caad8be4c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 263,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/HMACCryptoTestCase.swift": {
+      "filePath": "Tests/HMACCryptoTestCase.swift",
+      "contentHash": "7b672b9f1faa836bebb987aa6361f4901ffaa1ff0e1ce09903af5387f16463af",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/HMACSignerTests.swift": {
+      "filePath": "Tests/HMACSignerTests.swift",
+      "contentHash": "fdb7d23a8ec742d111126c23b00b55899a05316053a92f98065ca2cbc3833721",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/HMACTests.swift": {
+      "filePath": "Tests/HMACTests.swift",
+      "contentHash": "8931bf70305cf8ad8ed889e11b4738e1c6e725607d0a311beaaf2410f7b37bcd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/HMACVerifierTests.swift": {
+      "filePath": "Tests/HMACVerifierTests.swift",
+      "contentHash": "121770e5ab5f77bfa86ef64e189230df905bf81901a86cd1f161e2f4dd61b670",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/Info.plist": {
+      "filePath": "Tests/Info.plist",
+      "contentHash": "40a79e271b762c3631d5a0ece6f6c55c1f9f90e56b180dba035b4abc44b4ed70",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWEAESKeyWrapTests.swift": {
+      "filePath": "Tests/JWEAESKeyWrapTests.swift",
+      "contentHash": "f0a43828ab022d431dab8571ab4aab39043f69f9bbf6a136c72362fac516aa8d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWECompressionTests.swift": {
+      "filePath": "Tests/JWECompressionTests.swift",
+      "contentHash": "be76502985d2b660f5c3c702cd087e38c2d512b494ceded144911bab0fc4ff13",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 129,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWEDeserializationTests.swift": {
+      "filePath": "Tests/JWEDeserializationTests.swift",
+      "contentHash": "55e9d320be4469064871473a1468d2c9d3ebff324f3a9460a15afee8130b23c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 129,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWEDirectEncryptionTests.swift": {
+      "filePath": "Tests/JWEDirectEncryptionTests.swift",
+      "contentHash": "bbb46f4623f262e33747c99985fed5062f9888a74e21ae5c399ab73bdbb7c779",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 130,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWEECTests.swift": {
+      "filePath": "Tests/JWEECTests.swift",
+      "contentHash": "090fd57f08774807cc802b82b933248609d6cbd7c9b70ec263bd76b6a5a8d653",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWEHeaderTests.swift": {
+      "filePath": "Tests/JWEHeaderTests.swift",
+      "contentHash": "8d25a92c019961254092844c0331ad01c409e7e534789a62130b3a7999b1c8be",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 482,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWEPBES2Tests.swift": {
+      "filePath": "Tests/JWEPBES2Tests.swift",
+      "contentHash": "65e366a4198634ed9d1a816ad10dfdcf12ccfc87a5167aa77d0a56c9051df45d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWERSATests.swift": {
+      "filePath": "Tests/JWERSATests.swift",
+      "contentHash": "dff2f3d6ebb20b38a799907c4993bd66e006218c4f61698149716dd4714cf9ec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 294,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKECDecodingTests.swift": {
+      "filePath": "Tests/JWKECDecodingTests.swift",
+      "contentHash": "14c6c7fd8a73eb4af4d516d0ee00589e90d80b98be522e432892c3065229df47",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 292,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKECEncodingTests.swift": {
+      "filePath": "Tests/JWKECEncodingTests.swift",
+      "contentHash": "ef939f416350de45d4526dcfdf0aa23750153d690d6cde68d5e32d7db84e73c4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 121,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKECKeysTests.swift": {
+      "filePath": "Tests/JWKECKeysTests.swift",
+      "contentHash": "b823b739a70dc9f8904a43192efab072522dbf56638c1c9ebadabddea33b834b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 266,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKRSADecodingTests.swift": {
+      "filePath": "Tests/JWKRSADecodingTests.swift",
+      "contentHash": "941d6322f5348486907c16388be9804b5a0edc915e9e0e66d60b98583c529142",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 383,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKRSAEncodingTests.swift": {
+      "filePath": "Tests/JWKRSAEncodingTests.swift",
+      "contentHash": "30a3bcbfac602ed6c2fc1b02a6895105ecca15f4d2bf5d34972cd23f9ed7a716",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 121,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKRSAKeysTests.swift": {
+      "filePath": "Tests/JWKRSAKeysTests.swift",
+      "contentHash": "c1b689b44297c8019ffb00edaf8dbc91cc61f561c37754c75e185c87d67474fc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 167,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKSetCodingTests.swift": {
+      "filePath": "Tests/JWKSetCodingTests.swift",
+      "contentHash": "43e6049f5063939ee424a95b2cedcfb42b86e8c1963f1700c69ab6107188a30f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 432,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKSetCollectionTests.swift": {
+      "filePath": "Tests/JWKSetCollectionTests.swift",
+      "contentHash": "3e83805cf5fcbab698056c7cbca99aff984d3a2c3a5447fa20b4a5016ec713b2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 86,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWKtoJSONTests.swift": {
+      "filePath": "Tests/JWKtoJSONTests.swift",
+      "contentHash": "e6a9500db0108f0006a4b51b166de6b17eb499f3c5a491e3872c2f0ba9b54a30",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSCustomEncrypterDecrypterTests.swift": {
+      "filePath": "Tests/JWSCustomEncrypterDecrypterTests.swift",
+      "contentHash": "b4866549a5e1d5b53027dacda8a05f338df27c781609ca00643bb5a6da90f20d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 120,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSCustomSignerVerifierTests.swift": {
+      "filePath": "Tests/JWSCustomSignerVerifierTests.swift",
+      "contentHash": "41e7e451adb493a5c31301344fa5f743f0501e72ce470c5347ca2f29561452b9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSDeserializationTests.swift": {
+      "filePath": "Tests/JWSDeserializationTests.swift",
+      "contentHash": "c6d18db637436bfa1b84c9c689f5ddb7fd48a3595ddb6bdfba2815110eacbb68",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 110,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSECTests.swift": {
+      "filePath": "Tests/JWSECTests.swift",
+      "contentHash": "f9d51b8f9489eb502aaf8d48a080781414c72efedcf7a5bfc8ca29ee78b4dd2f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 73,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSHeaderTests.swift": {
+      "filePath": "Tests/JWSHeaderTests.swift",
+      "contentHash": "8556c46a917ecca18ea13cdeb22696169dce377853074e3768e33eb5598f4d51",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 333,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSHMACTests.swift": {
+      "filePath": "Tests/JWSHMACTests.swift",
+      "contentHash": "ac75f48208f4eba5d277dce6512a3ca1721ec88ce514565bfdfc2ce709478ed2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSRSATests.swift": {
+      "filePath": "Tests/JWSRSATests.swift",
+      "contentHash": "94dd7bdc2e81e5381ecaae1f67375af73f164f4edb624993cca9affed8b6249c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 137,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSSigningInputTest.swift": {
+      "filePath": "Tests/JWSSigningInputTest.swift",
+      "contentHash": "96b381b159f7b0fc318865a63210711311c6585e13fb452ef58e99d3a1a5505f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/JWSValidationTests.swift": {
+      "filePath": "Tests/JWSValidationTests.swift",
+      "contentHash": "092cd19df74bba5d0ff1120648befc84d448523a5b50ee82a83d700e420f1e6f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 179,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/PBES2KeyEncryptionModeTests.swift": {
+      "filePath": "Tests/PBES2KeyEncryptionModeTests.swift",
+      "contentHash": "e26eae9d4d4ba087fa2bfa4181737e844933474afb94edb030f20b9c7bb972dd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 149,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/PBES2Tests.swift": {
+      "filePath": "Tests/PBES2Tests.swift",
+      "contentHash": "54066f97b0f31c7f7582a4e4b492eed7f359287bff2b7487f0ee22d7c1b0cbe6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/RSACryptoTestCase.swift": {
+      "filePath": "Tests/RSACryptoTestCase.swift",
+      "contentHash": "97d1c58bb005bcecbcb7abb60243804b9658622489c97104ecbe74ea31e02a71",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 190,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/RSADecryptionTests.swift": {
+      "filePath": "Tests/RSADecryptionTests.swift",
+      "contentHash": "bdba5a2cfa6361a0dc66bcd239ab86585e3c70f70d5af24b5b87c7155e5fbfb4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 249,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/RSAEncryptionTests.swift": {
+      "filePath": "Tests/RSAEncryptionTests.swift",
+      "contentHash": "b945f2d1e8783649c430e6e30ea811d3f9f7e7c262e389160919800518cfc0a3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 184,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/RSAKeyManagementModeTests.swift": {
+      "filePath": "Tests/RSAKeyManagementModeTests.swift",
+      "contentHash": "defca8177c4dab4772a7c18b995dedb6bcd3320c63069f101adc7dedf695e7e9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 213,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/RSAPublicKeyToDataTests.swift": {
+      "filePath": "Tests/RSAPublicKeyToDataTests.swift",
+      "contentHash": "1289172e114647ab11794b5dc2cca16395432332174d544195f1c59035869c93",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/RSAPublicKeyToSecKeyTests.swift": {
+      "filePath": "Tests/RSAPublicKeyToSecKeyTests.swift",
+      "contentHash": "bb819f7760bb654d16873ec997749c74faa6cac2c654324079d17905085bc808",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/RSASignerTests.swift": {
+      "filePath": "Tests/RSASignerTests.swift",
+      "contentHash": "fbe5824f8525f87723053b708bb0eecc5be0519560ac06307197cff8b29772e9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/RSAVerifierTests.swift": {
+      "filePath": "Tests/RSAVerifierTests.swift",
+      "contentHash": "aa6a0f7f82c0cceeff47f6b53729fedc5afd6af0f2daca07c43291050673513e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/SecKeyECPrivateKeyTests.swift": {
+      "filePath": "Tests/SecKeyECPrivateKeyTests.swift",
+      "contentHash": "14cbbea59f798044173b1e754f0c1f14bcf1ce87638609b90deb5ef460fb41e3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 84,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/SecKeyECPublicKeyTests.swift": {
+      "filePath": "Tests/SecKeyECPublicKeyTests.swift",
+      "contentHash": "c93c0494e4a05e287ab2e5fcf5aefa5bfb2e35a4b5a390c1aaa139635b2de2ae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/SecKeyRSAPublicKeyTests.swift": {
+      "filePath": "Tests/SecKeyRSAPublicKeyTests.swift",
+      "contentHash": "668cb7cb7dafb7b047f74930c8d16bc26ac7b91101c27be46cc9f26b5d4d2093",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 127,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/SymmetricKeyTests.swift": {
+      "filePath": "Tests/SymmetricKeyTests.swift",
+      "contentHash": "259eb24a00c7f4ed69815fd6adf48a7b77b3a43403aeccc053ca04f55e62b6f8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 170,
+      "hasStructuralAnalysis": false
+    },
+    "Tests/TestKeys.plist": {
+      "filePath": "Tests/TestKeys.plist",
+      "contentHash": "c516c7f819d8014df40c0abbb42e709255c2d32dc60b6c3b572bab4aae1221cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    }
+  }
+}
