@@ -146,8 +146,8 @@ public enum ECCompression: UInt8 {
 
 internal struct EC {
     typealias KeyType = SecKey
-    typealias PrivateKey = ECPrivateKey
-    typealias PublicKey = ECPublicKey
+    typealias PrivateKey = SecKey
+    typealias PublicKey = SecKey
 
     ///  Signs input data with a given elliptic curve algorithm and the corresponding private key.
     ///
@@ -280,7 +280,7 @@ internal struct EC {
     /// Encrypts a plain text using a given `EC` algorithm and the corresponding public key.
     ///
     /// - Parameters:
-    ///   - publicKey: The public key.
+    ///   - publicKey: The recipient's public key (`SecKey`).
     ///   - algorithm: The algorithm used for the key management.
     ///   - encryption: The algorithm used to encrypt the plain text.
     ///   - header: The JWE header.
@@ -293,16 +293,24 @@ internal struct EC {
                                      header: JWEHeader,
                                      options: [String: Any] = [:]
     ) throws -> (contentEncryptionKey: Data, encryptedKey: Data, jweHeaderData: Data) {
-        var ephemeralKeyPair: ECKeyPair
+        guard let curveType = curveType(from: publicKey) else {
+            throw ECError.invalidCurveDigestAlgorithm
+        }
+
+        let ephemeralPrivateKey: SecKey
+        let ephemeralPublicKeyJWK: ECPublicKey
         if let eKeyPair = options["ephemeralKeyPair"] as? ECKeyPair {
-            ephemeralKeyPair = eKeyPair
+            ephemeralPrivateKey = try eKeyPair.getPrivate().converted(to: SecKey.self)
+            ephemeralPublicKeyJWK = eKeyPair.getPublic()
         } else {
-            ephemeralKeyPair = try ECKeyPair.generateWith(publicKey.crv)
+            let pair = try generateEphemeralSecKeyPair(curveType)
+            ephemeralPrivateKey = pair.privateKey
+            ephemeralPublicKeyJWK = pair.publicKeyJWK
         }
 
         let kek = try keyAgreementCompute(with: algorithm,
                                           encryption: encryption,
-                                          privateKey: ephemeralKeyPair.getPrivate(),
+                                          privateKey: ephemeralPrivateKey,
                                           publicKey: publicKey,
                                           apu: Data(base64URLEncoded: header.apu ?? "") ?? Data(),
                                           apv: Data(base64URLEncoded: header.apv ?? "") ?? Data())
@@ -322,10 +330,14 @@ internal struct EC {
         }
 
         var updatedHeader = header
-        if let epk = updatedHeader.epk, !ephemeralKeyPair.getPrivate().isCorrespondWith(epk) {
-            updatedHeader.epk = ephemeralKeyPair.getPublic()
-        } else if updatedHeader.epk == nil {
-            updatedHeader.epk = ephemeralKeyPair.getPublic()
+        if let existingEpk = updatedHeader.epk {
+            // If the caller provided an epk that doesn't match the ephemeral public key,
+            // overwrite it with the correct one. A mismatch would cause decryption failure.
+            if existingEpk.x != ephemeralPublicKeyJWK.x || existingEpk.y != ephemeralPublicKeyJWK.y || existingEpk.crv != ephemeralPublicKeyJWK.crv {
+                updatedHeader.epk = ephemeralPublicKeyJWK
+            }
+        } else {
+            updatedHeader.epk = ephemeralPublicKeyJWK
         }
 
         return (contentEncryptionKey: contentKey, encryptedKey: encryptedKey, jweHeaderData: updatedHeader.headerData)
@@ -335,7 +347,7 @@ internal struct EC {
     ///
     /// - Parameters:
     ///   - encryptedKey: The cipher text to decrypt.
-    ///   - privateKey: The private key.
+    ///   - privateKey: The recipient's private key (`SecKey`).
     ///   - algorithm: The algorithm used for the key management.
     ///   - encryption: The algorithm used to decrypt the cipher text.
     ///   - header: The JWE header.
@@ -352,9 +364,11 @@ internal struct EC {
             throw ECError.invalidJWK(reason: "Missing header")
         }
 
-        guard let ephemeralPubKey = jweHeader.epk else {
+        guard let ephemeralPubKeyJWK = jweHeader.epk else {
             throw ECError.invalidJWK(reason: "missing ephemeral public key in header")
         }
+
+        let ephemeralPubKey = try ephemeralPubKeyJWK.converted(to: SecKey.self)
 
         // apu and apv have to be base64URL encoded as described here : https://datatracker.ietf.org/doc/html/rfc7518#page-17
         let apu = Data(base64URLEncoded: jweHeader.apu ?? "") ?? Data()
@@ -367,5 +381,34 @@ internal struct EC {
         } else {
             return kek
         }
+    }
+
+    /// Extracts the EC curve type from a SecKey's attributes.
+    static func curveType(from secKey: SecKey) -> ECCurveType? {
+        guard let attrs = SecKeyCopyAttributes(secKey) as? [CFString: Any] else { return nil }
+        // Try kSecAttrKeySizeInBits first, fall back to kSecAttrEffectiveKeySize
+        let bits = (attrs[kSecAttrKeySizeInBits] as? Int) ?? (attrs[kSecAttrEffectiveKeySize] as? Int)
+        guard let bits = bits else { return nil }
+        return ECCurveType.fromKeyBitLength(bits)
+    }
+
+    /// Generates an ephemeral EC key pair, returning the private SecKey and public key as JWK (for the JWE header epk).
+    static func generateEphemeralSecKeyPair(_ curveType: ECCurveType) throws -> (privateKey: SecKey, publicKeyJWK: ECPublicKey) {
+        let attributes: [String: Any] = [
+            kSecAttrKeyType as String: kSecAttrKeyTypeEC,
+            kSecAttrKeySizeInBits as String: curveType.keyBitLength,
+            kSecPrivateKeyAttrs as String: [kSecAttrIsPermanent as String: false]
+        ]
+        var error: Unmanaged<CFError>?
+        guard let privateKey = SecKeyCreateRandomKey(attributes as CFDictionary, &error) else {
+            throw ECError.encryptingFailed(
+                description: error?.takeRetainedValue().localizedDescription ?? "Failed to generate ephemeral key pair."
+            )
+        }
+        guard let publicKey = SecKeyCopyPublicKey(privateKey) else {
+            throw ECError.encryptingFailed(description: "Failed to derive public key from ephemeral key pair.")
+        }
+        let publicKeyJWK = try ECPublicKey(publicKey: publicKey)
+        return (privateKey: privateKey, publicKeyJWK: publicKeyJWK)
     }
 }

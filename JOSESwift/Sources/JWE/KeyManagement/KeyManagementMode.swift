@@ -76,7 +76,8 @@ extension KeyManagementAlgorithm {
 
             return DirectEncryptionMode(keyManagementAlgorithm: self, sharedSymmetricKey: sharedSymmetricKey)
         case .ECDH_ES, .ECDH_ES_A128KW, .ECDH_ES_A192KW, .ECDH_ES_A256KW:
-            guard let recipientPublicKey = cast(encryptionKey, to: ECKeyEncryption.PublicKey.self) else {
+            guard let recipientPublicKey = cast(encryptionKey, to: SecKey.self),
+                  isSecKeyPublic(recipientPublicKey) else {
                 return nil
             }
 
@@ -131,7 +132,8 @@ extension KeyManagementAlgorithm {
 
             return DirectEncryptionMode(keyManagementAlgorithm: self, sharedSymmetricKey: sharedSymmetricKey)
         case .ECDH_ES, .ECDH_ES_A128KW, .ECDH_ES_A192KW, .ECDH_ES_A256KW:
-            guard let recipientPrivateKey = cast(decryptionKey, to: ECKeyEncryption.PrivateKey.self) else {
+            guard let recipientPrivateKey = cast(decryptionKey, to: SecKey.self),
+                  isSecKeyPrivate(recipientPrivateKey) else {
                 return nil
             }
 
@@ -161,4 +163,20 @@ private func cast<GivenType, ExpectedType>(
     // Therefore we perform runtime type checking to guarantee that the given encryption key's type
     // matches the type that the respective key management mode expects.
     return (type(of: something) is ExpectedType.Type) ? (something as! ExpectedType) : nil
+}
+
+private func isSecKeyPublic(_ key: SecKey) -> Bool {
+    guard let attributes = SecKeyCopyAttributes(key) as? [CFString: Any],
+          // All possible keyClasses are of type `CFString`.
+          // swiftlint:disable:next force_cast
+          (attributes[kSecAttrKeyClass] as! CFString) == kSecAttrKeyClassPublic else { return false }
+    return true
+}
+
+private func isSecKeyPrivate(_ key: SecKey) -> Bool {
+    guard let attributes = SecKeyCopyAttributes(key) as? [CFString: Any],
+          // All possible keyClasses are of type `CFString`.
+          // swiftlint:disable:next force_cast
+          (attributes[kSecAttrKeyClass] as! CFString) == kSecAttrKeyClassPrivate else { return false }
+    return true
 }

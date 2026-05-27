@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "baseBranch": "master",
+  "generatedAt": "2026-05-27T14:15:00+08:00",
+  "changedFiles": [
+    "JOSESwift/Sources/CryptoPrimitives/EC/EC.swift",
+    "JOSESwift/Sources/CryptoPrimitives/EC/ECDHKeyAgreement.swift",
+    "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/EC/ECKeyEncryption.swift",
+    "JOSESwift/Sources/JWE/KeyManagement/KeyManagementMode.swift",
+    "Tests/ECDHTests.swift",
+    "Tests/EncrypterDecrypterInitializationTests.swift",
+    "Tests/JWEECTests.swift"
+  ],
+  "changedNodeIds": [
+    "file:JOSESwift/Sources/CryptoPrimitives/EC/EC.swift",
+    "function:JOSESwift/Sources/CryptoPrimitives/EC/EC.swift:encryptionContextFor",
+    "function:JOSESwift/Sources/CryptoPrimitives/EC/EC.swift:decrypt",
+    "file:JOSESwift/Sources/CryptoPrimitives/EC/ECDHKeyAgreement.swift",
+    "function:JOSESwift/Sources/CryptoPrimitives/EC/ECDHKeyAgreement.swift:keyAgreementCompute",
+    "function:JOSESwift/Sources/CryptoPrimitives/EC/ECDHKeyAgreement.swift:ecdhDeriveBits",
+    "file:JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/EC/ECKeyEncryption.swift",
+    "file:JOSESwift/Sources/JWE/KeyManagement/KeyManagementMode.swift"
+  ],
+  "affectedNodeIds": [
+    "file:JOSESwift/Sources/JWE/Encrypter.swift",
+    "file:JOSESwift/Sources/JWE/Decrypter.swift",
+    "file:JOSESwift/Sources/JWE/JWE.swift",
+    "file:JOSESwift/Sources/JWS/DefaultCrypto/EC/ECSigner.swift",
+    "file:JOSESwift/Sources/JWS/DefaultCrypto/EC/ECVerifier.swift",
+    "file:JOSESwift/Sources/JWK/EC/ECKeys.swift",
+    "file:JOSESwift/Sources/JWK/EC/ECKeyPair.swift"
+  ]
+}

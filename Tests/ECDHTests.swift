@@ -22,22 +22,28 @@
 //
 
 import XCTest
+import Security
 @testable import JOSESwift
 
 // swiftlint:disable force_unwrapping
 
 class ECDHTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // MARK: - Helper to create SecKey from JWK ECPrivateKey
+
+    private func secKeyFromJWK(_ jwkData: Data) throws -> SecKey {
+        let privateKey = try ECPrivateKey(data: jwkData)
+        return try privateKey.converted(to: SecKey.self)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    private func secKeyFromPublicJWK(_ jwkData: Data) throws -> SecKey {
+        let publicKey = try ECPublicKey(data: jwkData)
+        return try publicKey.converted(to: SecKey.self)
     }
+
+    // MARK: - ECDH Key Agreement Tests
 
     func testEcdhP521() {
-
         let staticJwkData = """
         {
             "crv": "P-521",
@@ -60,10 +66,15 @@ class ECDHTests: XCTestCase {
 
         let expectedData = Data([0, 224, 82, 100, 184, 24, 23, 138, 155, 73, 143, 68, 142, 226, 142, 110, 120, 220, 105, 106, 220, 85, 251, 114, 5, 204, 117, 169, 140, 138, 219, 35, 86, 248, 83, 154, 231, 135, 207, 180, 80, 37, 122, 50, 47, 105, 227, 145, 69, 175, 167, 180, 171, 178, 219, 130, 56, 120, 3, 241, 93, 136, 176, 18, 188, 168])
 
-        let staticEcKey = try! ECPrivateKey(data: staticJwkData!)
-        let ephermeralEcKey = try! ECPrivateKey(data: ephermeralJwkData!)
-        let bobData = try! ecdhDeriveBits(for: ephermeralEcKey.getPrivate(), publicKey: staticEcKey.getPublic())
-        let aliceData = try! ecdhDeriveBits(for: staticEcKey.getPrivate(), publicKey: ephermeralEcKey.getPublic())
+        let staticPrivKey = try! secKeyFromJWK(staticJwkData!)
+        let staticPubKeyJWK = try! ECPublicKey(data: staticJwkData!)
+        let staticPubKey = try! staticPubKeyJWK.converted(to: SecKey.self)
+        let ephemeralPrivKey = try! secKeyFromJWK(ephermeralJwkData!)
+        let ephemeralPubKeyJWK = try! ECPublicKey(data: ephermeralJwkData!)
+        let ephemeralPubKey = try! ephemeralPubKeyJWK.converted(to: SecKey.self)
+
+        let bobData = try! ecdhDeriveBits(for: ephemeralPrivKey, publicKey: staticPubKey)
+        let aliceData = try! ecdhDeriveBits(for: staticPrivKey, publicKey: ephemeralPubKey)
         XCTAssertEqual(bobData, expectedData)
         XCTAssertEqual(aliceData, bobData)
     }
@@ -91,10 +102,15 @@ class ECDHTests: XCTestCase {
 
         let expectedData = Data([230, 105, 144, 136, 251, 105, 192, 113, 56, 83, 18, 77, 253, 246, 16, 220, 184, 123, 192, 83, 77, 64, 255, 78, 114, 215, 36, 153, 91, 35, 78, 172, 23, 100, 143, 14, 243, 240, 74, 114, 216, 253, 94, 254, 97, 149, 115, 196])
 
-        let staticEcKey = try! ECPrivateKey(data: staticJwkData!)
-        let ephermeralEcKey = try! ECPrivateKey(data: ephermeralJwkData!)
-        let bobData = try! ecdhDeriveBits(for: ephermeralEcKey.getPrivate(), publicKey: staticEcKey.getPublic())
-        let aliceData = try! ecdhDeriveBits(for: staticEcKey.getPrivate(), publicKey: ephermeralEcKey.getPublic())
+        let staticPrivKey = try! secKeyFromJWK(staticJwkData!)
+        let staticPubKeyJWK = try! ECPublicKey(data: staticJwkData!)
+        let staticPubKey = try! staticPubKeyJWK.converted(to: SecKey.self)
+        let ephemeralPrivKey = try! secKeyFromJWK(ephermeralJwkData!)
+        let ephemeralPubKeyJWK = try! ECPublicKey(data: ephermeralJwkData!)
+        let ephemeralPubKey = try! ephemeralPubKeyJWK.converted(to: SecKey.self)
+
+        let bobData = try! ecdhDeriveBits(for: ephemeralPrivKey, publicKey: staticPubKey)
+        let aliceData = try! ecdhDeriveBits(for: staticPrivKey, publicKey: ephemeralPubKey)
         XCTAssertEqual(bobData, expectedData)
         XCTAssertEqual(aliceData, bobData)
     }
@@ -122,35 +138,54 @@ class ECDHTests: XCTestCase {
 
         let expectedData = Data([73, 222, 123, 31, 188, 213, 243, 252, 244, 226, 35, 24, 228, 238, 70, 152, 31, 249, 163, 201, 233, 219, 202, 33, 245, 140, 21, 169, 252, 199, 110, 177])
 
-        let staticEcKey = try! ECPrivateKey(data: staticJwkData!)
-        let ephermeralEcKey = try! ECPrivateKey(data: ephermeralJwkData!)
-        let bobData = try! ecdhDeriveBits(for: ephermeralEcKey.getPrivate(), publicKey: staticEcKey.getPublic())
-        let aliceData = try! ecdhDeriveBits(for: staticEcKey.getPrivate(), publicKey: ephermeralEcKey.getPublic())
+        let staticPrivKey = try! secKeyFromJWK(staticJwkData!)
+        let staticPubKeyJWK = try! ECPublicKey(data: staticJwkData!)
+        let staticPubKey = try! staticPubKeyJWK.converted(to: SecKey.self)
+        let ephemeralPrivKey = try! secKeyFromJWK(ephermeralJwkData!)
+        let ephemeralPubKeyJWK = try! ECPublicKey(data: ephermeralJwkData!)
+        let ephemeralPubKey = try! ephemeralPubKeyJWK.converted(to: SecKey.self)
+
+        let bobData = try! ecdhDeriveBits(for: ephemeralPrivKey, publicKey: staticPubKey)
+        let aliceData = try! ecdhDeriveBits(for: staticPrivKey, publicKey: ephemeralPubKey)
         XCTAssertEqual(bobData, expectedData)
         XCTAssertEqual(aliceData, bobData)
     }
 
-    func testDeriveKeyDataShoudTheSameP256() {
-        let staticKey = try! ECKeyPair.generateWith(ECCurveType.P256)
-        let ephermeralKey = try! ECKeyPair.generateWith(ECCurveType.P256)
-        let data1 = try! ecdhDeriveBits(for: staticKey.getPrivate(), publicKey: ephermeralKey.getPublic())
-        let data2 = try! ecdhDeriveBits(for: ephermeralKey.getPrivate(), publicKey: staticKey.getPublic())
+    // MARK: - SecKey Key Agreement Tests
+
+    private func generateECKeyPair(bits: Int) -> (privateKey: SecKey, publicKey: SecKey) {
+        let attributes: [String: Any] = [
+            kSecAttrKeyType as String: kSecAttrKeyTypeEC,
+            kSecAttrKeySizeInBits as String: bits,
+            kSecPrivateKeyAttrs as String: [kSecAttrIsPermanent as String: false]
+        ]
+        var error: Unmanaged<CFError>?
+        let privateKey = SecKeyCreateRandomKey(attributes as CFDictionary, &error)!
+        let publicKey = SecKeyCopyPublicKey(privateKey)!
+        return (privateKey: privateKey, publicKey: publicKey)
+    }
+
+    func testDeriveKeyDataShouldTheSameP256() {
+        let staticKey = generateECKeyPair(bits: 256)
+        let ephermeralKey = generateECKeyPair(bits: 256)
+        let data1 = try! ecdhDeriveBits(for: staticKey.privateKey, publicKey: ephermeralKey.publicKey)
+        let data2 = try! ecdhDeriveBits(for: ephermeralKey.privateKey, publicKey: staticKey.publicKey)
         XCTAssertEqual(data1, data2)
     }
 
-    func testDeriveKeyDataShoudTheSameP384() {
-        let staticKey = try! ECKeyPair.generateWith(ECCurveType.P384)
-        let ephermeralKey = try! ECKeyPair.generateWith(ECCurveType.P384)
-        let data1 = try! ecdhDeriveBits(for: staticKey.getPrivate(), publicKey: ephermeralKey.getPublic())
-        let data2 = try! ecdhDeriveBits(for: ephermeralKey.getPrivate(), publicKey: staticKey.getPublic())
+    func testDeriveKeyDataShouldTheSameP384() {
+        let staticKey = generateECKeyPair(bits: 384)
+        let ephermeralKey = generateECKeyPair(bits: 384)
+        let data1 = try! ecdhDeriveBits(for: staticKey.privateKey, publicKey: ephermeralKey.publicKey)
+        let data2 = try! ecdhDeriveBits(for: ephermeralKey.privateKey, publicKey: staticKey.publicKey)
         XCTAssertEqual(data1, data2)
     }
 
-    func testDeriveKeyDataShoudTheSameP521() {
-        let staticKey = try! ECKeyPair.generateWith(ECCurveType.P521)
-        let ephermeralKey = try! ECKeyPair.generateWith(ECCurveType.P521)
-        let data1 = try! ecdhDeriveBits(for: staticKey.getPrivate(), publicKey: ephermeralKey.getPublic())
-        let data2 = try! ecdhDeriveBits(for: ephermeralKey.getPrivate(), publicKey: staticKey.getPublic())
+    func testDeriveKeyDataShouldTheSameP521() {
+        let staticKey = generateECKeyPair(bits: 521)
+        let ephermeralKey = generateECKeyPair(bits: 521)
+        let data1 = try! ecdhDeriveBits(for: staticKey.privateKey, publicKey: ephermeralKey.publicKey)
+        let data2 = try! ecdhDeriveBits(for: ephermeralKey.privateKey, publicKey: staticKey.publicKey)
         XCTAssertEqual(data1, data2)
     }
 
@@ -204,6 +239,9 @@ class ECDHTests: XCTestCase {
         }
         """.data(using: .utf8)!)
 
+        let alicePubSecKey = try! aliceKey.getPublic().converted(to: SecKey.self)
+        let bobPrivSecKey = try! bobKey.getPrivate().converted(to: SecKey.self)
+
         let alg = KeyManagementAlgorithm.ECDH_ES
         let enc = ContentEncryptionAlgorithm.A256CBCHS512
         let apuData = "Alice".data(using: .utf8)!
@@ -211,8 +249,8 @@ class ECDHTests: XCTestCase {
         let expected = Data([57, 134, 170, 121, 246, 57, 100, 32, 229, 128, 229, 211, 137, 15, 98, 63, 238, 93, 69, 34, 48, 121, 41, 235, 153, 238, 52, 37, 160, 1, 236, 193, 117, 177, 117, 78, 63, 182, 68, 206, 130, 80, 52, 181, 98, 82, 62, 154, 136, 6, 188, 168, 215, 106, 250, 134, 30, 155, 121, 81, 88, 3, 34, 93])
         let data = try! keyAgreementCompute(with: alg,
                                             encryption: enc,
-                                            privateKey: bobKey.getPrivate(),
-                                            publicKey: aliceKey.getPublic(),
+                                            privateKey: bobPrivSecKey,
+                                            publicKey: alicePubSecKey,
                                             apu: apuData,
                                             apv: apvData)
         XCTAssertEqual(data, expected)

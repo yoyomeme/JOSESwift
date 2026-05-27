@@ -25,9 +25,9 @@ import Foundation
 
 /// recipient using an asymmetric ECDH encryption algorithm. The resulting ciphertext is the JWE encrypted key.
 enum ECKeyEncryption {
-    typealias KeyType = EC.KeyType
-    typealias PrivateKey = EC.PrivateKey
-    typealias PublicKey = EC.PublicKey
+    typealias KeyType = SecKey
+    typealias PrivateKey = SecKey
+    typealias PublicKey = SecKey
 
     struct EncryptionMode {
         private let keyManagementAlgorithm: KeyManagementAlgorithm

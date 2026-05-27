@@ -23,6 +23,7 @@
 //
 
 import XCTest
+import Security
 @testable import JOSESwift
 
 // https://stackoverflow.com/a/38725560/5233456
@@ -64,17 +65,15 @@ class EncrypterDecrypterInitializationTests: RSACryptoTestCase {
                     )
                 )
             case ecdhKeyManagementModeAlgorithms:
-                let pubJwk = """
-                  {
-                    "crv": "P-256",
-                    "kty": "EC",
-                    "x": "CQJxA68WhgU3hztigbedfLtJitDhScq3XSnXgO0FV5o",
-                    "y": "WFg6s36izURa733WqeoJ8zXMd7ho5OSwdWnMsEPgTEI"
-                  }
-                """.data(using: .utf8)
-
-                guard let publicJWK = pubJwk, let publicKey = try? ECPublicKey(data: publicJWK) else {
-                    return XCTAssertThrowsError("publicKey is nil")
+                let attributes: [String: Any] = [
+                    kSecAttrKeyType as String: kSecAttrKeyTypeEC,
+                    kSecAttrKeySizeInBits as String: 256,
+                    kSecPrivateKeyAttrs as String: [kSecAttrIsPermanent as String: false]
+                ]
+                var error: Unmanaged<CFError>?
+                guard let privateKey = SecKeyCreateRandomKey(attributes as CFDictionary, &error),
+                      let publicKey = SecKeyCopyPublicKey(privateKey) else {
+                    return XCTFail("Failed to generate EC key pair")
                 }
 
                 XCTAssertNotNil(
@@ -175,18 +174,14 @@ class EncrypterDecrypterInitializationTests: RSACryptoTestCase {
                     )
                 )
             case ecdhKeyManagementModeAlgorithms:
-                let privJwk = """
-                  {
-                    "crv": "P-256",
-                    "d": "920OCD0fW97YXbQNN-JaOtaDgbuNyVxXgKwjfXPPqv4",
-                    "kty": "EC",
-                    "x": "CQJxA68WhgU3hztigbedfLtJitDhScq3XSnXgO0FV5o",
-                    "y": "WFg6s36izURa733WqeoJ8zXMd7ho5OSwdWnMsEPgTEI"
-                  }
-                """.data(using: .utf8)
-
-                guard let privateJWK = privJwk, let privateKey = try? ECPrivateKey(data: privateJWK) else {
-                    return XCTAssertThrowsError("privateKey is nil")
+                let attributes: [String: Any] = [
+                    kSecAttrKeyType as String: kSecAttrKeyTypeEC,
+                    kSecAttrKeySizeInBits as String: 256,
+                    kSecPrivateKeyAttrs as String: [kSecAttrIsPermanent as String: false]
+                ]
+                var error: Unmanaged<CFError>?
+                guard let privateKey = SecKeyCreateRandomKey(attributes as CFDictionary, &error) else {
+                    return XCTFail("Failed to generate EC private key")
                 }
 
                 XCTAssertNotNil(
