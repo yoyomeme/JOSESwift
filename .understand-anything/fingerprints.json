@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "ee94ae79c5a5e5d53a206d4f9b7bdb93b3b77d60",
-  "generatedAt": "2026-05-26T14:52:21.673Z",
+  "gitCommitHash": "423dfff2daa25bdeed217b45d80e3a82c0a10a06",
+  "generatedAt": "2026-05-27T07:55:43.780Z",
   "files": {
     ".circleci/config.yml": {
       "filePath": ".circleci/config.yml",
@@ -83,6 +83,56 @@
       "totalLines": 12,
       "hasStructuralAnalysis": true
     },
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "18c9b0e98fcb6829f768682d60c53b80b008866b500c453b8d7670bfbe1671f6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": false
+    },
+    ".understand-anything/diff-overlay.json": {
+      "filePath": ".understand-anything/diff-overlay.json",
+      "contentHash": "b936778de8191a09947bf93ad01bcca630a73785d65ec44d9f35002bc0fc4910",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    ".understand-anything/fingerprints.json": {
+      "filePath": ".understand-anything/fingerprints.json",
+      "contentHash": "409837ba3c63887ca21366c56ae4a261716281d6f7625224e1bf52fccc5decc0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2010,
+      "hasStructuralAnalysis": true
+    },
+    ".understand-anything/knowledge-graph.json": {
+      "filePath": ".understand-anything/knowledge-graph.json",
+      "contentHash": "66a124dac2aee62b115a3809a3f07457303c9a2d7ff30120542a9419c0c5a81c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4712,
+      "hasStructuralAnalysis": true
+    },
+    ".understand-anything/meta.json": {
+      "filePath": ".understand-anything/meta.json",
+      "contentHash": "425bd35376ea549a439e6e5e6dbdb9c89b874c06f3ce69d949c2318b3f72f105",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
     "BuildTools/Empty.swift": {
       "filePath": "BuildTools/Empty.swift",
       "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -95,7 +145,7 @@
     },
     "BuildTools/Package.resolved": {
       "filePath": "BuildTools/Package.resolved",
-      "contentHash": "a9632b200c9117167d4995dffc82d2cbeb8143f7ae31ff27b9063b719b214da8",
+      "contentHash": "d9b61f36ad7b8236db85cca494f92da7418a57cf5ac8af90f09e9cc21d837419",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -355,22 +405,22 @@
     },
     "JOSESwift/Sources/CryptoPrimitives/EC/EC.swift": {
       "filePath": "JOSESwift/Sources/CryptoPrimitives/EC/EC.swift",
-      "contentHash": "8f52f762e71f02552cdc2ec1a7f72ed973598524afd812613668703fbfce67cf",
+      "contentHash": "a0986ec173e84a8b52e2fed1d96d79ef9d1ec8cb9362863d7ba9112538c71ee9",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 372,
+      "totalLines": 415,
       "hasStructuralAnalysis": false
     },
     "JOSESwift/Sources/CryptoPrimitives/EC/ECDHKeyAgreement.swift": {
       "filePath": "JOSESwift/Sources/CryptoPrimitives/EC/ECDHKeyAgreement.swift",
-      "contentHash": "30f97794563d5c311c4cc3ca388eb0110ef21204270dc897ffac343cd4675b43",
+      "contentHash": "22480c9648c6977c4ce750e88f74987eefcd915f59f5803201c8613d476c32a4",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 220,
+      "totalLines": 221,
       "hasStructuralAnalysis": false
     },
     "JOSESwift/Sources/CryptoPrimitives/HMAC/HMAC.swift": {
@@ -535,7 +585,7 @@
     },
     "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/EC/ECKeyEncryption.swift": {
       "filePath": "JOSESwift/Sources/JWE/KeyManagement/DefaultCrypto/EC/ECKeyEncryption.swift",
-      "contentHash": "23fa5cc4db8ca0283afaa49f3c95a9b1e5f6a24a0deb6e42be9f394ef81ef269",
+      "contentHash": "1c2f97cc3d01af3652e87a58e94347ccf9a7f46e9efaffc3ef8ca337ead88817",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -565,12 +615,12 @@
     },
     "JOSESwift/Sources/JWE/KeyManagement/KeyManagementMode.swift": {
       "filePath": "JOSESwift/Sources/JWE/KeyManagement/KeyManagementMode.swift",
-      "contentHash": "21452c855cc05d86e98ca6904599d6a2848548e3a2e051f9c5780b6038c99775",
+      "contentHash": "c37d841d9c7ef9107013958138a04d63a2092f7c34cc8d04203d20e4a539dcee",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 165,
+      "totalLines": 183,
       "hasStructuralAnalysis": false
     },
     "JOSESwift/Sources/JWK/EC/DataECPrivateKey.swift": {
@@ -1468,12 +1518,12 @@
     },
     "Tests/ECDHTests.swift": {
       "filePath": "Tests/ECDHTests.swift",
-      "contentHash": "e6545cc0e41ae162176e4444f906b5e440c2bf382355a8bd34d7b9585b441050",
+      "contentHash": "841b15536a3eefea5ecf138c8278fd3ff85e6c0d4ac87a5b731d0672fea88dc6",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 244,
+      "totalLines": 282,
       "hasStructuralAnalysis": false
     },
     "Tests/ECPrivateKeyToDataTests.swift": {
@@ -1538,12 +1588,12 @@
     },
     "Tests/EncrypterDecrypterInitializationTests.swift": {
       "filePath": "Tests/EncrypterDecrypterInitializationTests.swift",
-      "contentHash": "866d91f8510711da453fbdff316b66d7ce632743a68d0902e2f2c39caad8be4c",
+      "contentHash": "10a7f4c996d25cd0860f46bc56b85512330495f6d750a311ad479e69e56649dd",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 263,
+      "totalLines": 258,
       "hasStructuralAnalysis": false
     },
     "Tests/HMACCryptoTestCase.swift": {
@@ -1638,12 +1688,12 @@
     },
     "Tests/JWEECTests.swift": {
       "filePath": "Tests/JWEECTests.swift",
-      "contentHash": "090fd57f08774807cc802b82b933248609d6cbd7c9b70ec263bd76b6a5a8d653",
+      "contentHash": "901ab133dac71fc5f1a5cee9dbb3f87a689d359e35f3219c83c6afb12ba17c19",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 82,
+      "totalLines": 313,
       "hasStructuralAnalysis": false
     },
     "Tests/JWEHeaderTests.swift": {
