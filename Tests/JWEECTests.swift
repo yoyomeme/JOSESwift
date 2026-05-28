@@ -281,6 +281,75 @@ class JWEECTests: XCTestCase {
         XCTAssertEqual(jwe.header.epk?.crv, .P256, "EPK should be P-256 curve")
     }
 
+    // MARK: - JWK Key Acceptance
+
+    /// Test that ECPublicKey (JWK) is accepted for encryption via auto-conversion to SecKey
+    func testEncrypterAcceptsJWKPublicKey() throws {
+        let keyPair = try generateECKeyPair(bits: 256)
+        let jwk = try ECPublicKey(publicKey: keyPair.publicKey)
+
+        // JWK should be accepted (auto-converts to SecKey internally)
+        let encrypter = Encrypter(keyManagementAlgorithm: .ECDH_ES_A128KW,
+                                  contentEncryptionAlgorithm: .A256CBCHS512,
+                                  encryptionKey: jwk)
+        XCTAssertNotNil(encrypter, "Encrypter should accept ECPublicKey (JWK) for ECDH encryption")
+
+        // Round-trip with SecKey decrypter should work
+        let decrypter = try XCTUnwrap(Decrypter(keyManagementAlgorithm: .ECDH_ES_A128KW,
+                                                contentEncryptionAlgorithm: .A256CBCHS512,
+                                                decryptionKey: keyPair.privateKey))
+        let input = try XCTUnwrap(plaintext.data(using: .utf8))
+        let header = JWEHeader(keyManagementAlgorithm: .ECDH_ES_A128KW, contentEncryptionAlgorithm: .A256CBCHS512)
+        let jwe = try JWE(header: header, payload: Payload(input), encrypter: encrypter!)
+        let decrypted = try JWE(compactSerialization: jwe.compactSerializedString).decrypt(using: decrypter)
+        XCTAssertEqual(decrypted.data(), input)
+    }
+
+    /// Test that ECPrivateKey (JWK) is accepted for decryption via auto-conversion to SecKey
+    func testDecrypterAcceptsJWKPrivateKey() throws {
+        let keyPair = try generateECKeyPair(bits: 256)
+
+        // Encrypt with SecKey public key
+        let encrypter = try XCTUnwrap(Encrypter(keyManagementAlgorithm: .ECDH_ES_A128KW,
+                                                contentEncryptionAlgorithm: .A256CBCHS512,
+                                                encryptionKey: keyPair.publicKey))
+        let input = try XCTUnwrap(plaintext.data(using: .utf8))
+        let header = JWEHeader(keyManagementAlgorithm: .ECDH_ES_A128KW, contentEncryptionAlgorithm: .A256CBCHS512)
+        let jwe = try JWE(header: header, payload: Payload(input), encrypter: encrypter)
+
+        // Create JWK private key from SecKey
+        let jwkPrivate = try ECPrivateKey(privateKey: keyPair.privateKey)
+
+        // JWK should be accepted (auto-converts to SecKey internally)
+        let decrypter = Decrypter(keyManagementAlgorithm: .ECDH_ES_A128KW,
+                                  contentEncryptionAlgorithm: .A256CBCHS512,
+                                  decryptionKey: jwkPrivate)
+        XCTAssertNotNil(decrypter, "Decrypter should accept ECPrivateKey (JWK) for ECDH decryption")
+
+        let decrypted = try JWE(compactSerialization: jwe.compactSerializedString).decrypt(using: decrypter!)
+        XCTAssertEqual(decrypted.data(), input)
+    }
+
+    /// Test full JWK-to-JWK round-trip (both encryption and decryption using JWK types)
+    func testJWKToJWKRountrip() throws {
+        let keyPair = try generateECKeyPair(bits: 256)
+        let jwkPublic = try ECPublicKey(publicKey: keyPair.publicKey)
+        let jwkPrivate = try ECPrivateKey(privateKey: keyPair.privateKey)
+
+        let encrypter = try XCTUnwrap(Encrypter(keyManagementAlgorithm: .ECDH_ES_A128KW,
+                                                contentEncryptionAlgorithm: .A256CBCHS512,
+                                                encryptionKey: jwkPublic))
+        let decrypter = try XCTUnwrap(Decrypter(keyManagementAlgorithm: .ECDH_ES_A128KW,
+                                                contentEncryptionAlgorithm: .A256CBCHS512,
+                                                decryptionKey: jwkPrivate))
+
+        let input = try XCTUnwrap(plaintext.data(using: .utf8))
+        let header = JWEHeader(keyManagementAlgorithm: .ECDH_ES_A128KW, contentEncryptionAlgorithm: .A256CBCHS512)
+        let jwe = try JWE(header: header, payload: Payload(input), encrypter: encrypter)
+        let decrypted = try JWE(compactSerialization: jwe.compactSerializedString).decrypt(using: decrypter)
+        XCTAssertEqual(decrypted.data(), input)
+    }
+
     // MARK: - Helper
 
     private func roundtripTest(algorithm: KeyManagementAlgorithm, encryption: ContentEncryptionAlgorithm, bits: Int) throws {

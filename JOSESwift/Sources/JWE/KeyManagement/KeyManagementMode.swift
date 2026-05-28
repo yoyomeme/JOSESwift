@@ -76,16 +76,24 @@ extension KeyManagementAlgorithm {
 
             return DirectEncryptionMode(keyManagementAlgorithm: self, sharedSymmetricKey: sharedSymmetricKey)
         case .ECDH_ES, .ECDH_ES_A128KW, .ECDH_ES_A192KW, .ECDH_ES_A256KW:
-            guard let recipientPublicKey = cast(encryptionKey, to: SecKey.self),
-                  isSecKeyPublic(recipientPublicKey) else {
-                return nil
+            // Accept SecKey directly (including Secure Enclave keys)
+            if let secKey = cast(encryptionKey, to: SecKey.self), isSecKeyPublic(secKey) {
+                return ECKeyEncryption.EncryptionMode(keyManagementAlgorithm: self,
+                                                      contentEncryptionAlgorithm: contentEncryptionAlgorithm,
+                                                      recipientPublicKey: secKey,
+                                                      agreementPartyUInfo: agreementPartyUInfo ?? Data(),
+                                                      agreementPartyVInfo: agreementPartyVInfo ?? Data())
             }
-
-            return ECKeyEncryption.EncryptionMode(keyManagementAlgorithm: self,
-                                                  contentEncryptionAlgorithm: contentEncryptionAlgorithm,
-                                                  recipientPublicKey: recipientPublicKey,
-                                                  agreementPartyUInfo: agreementPartyUInfo ?? Data(),
-                                                  agreementPartyVInfo: agreementPartyVInfo ?? Data())
+            // Also accept ECPublicKey (JWK) — convert to SecKey internally
+            if let jwk = cast(encryptionKey, to: ECPublicKey.self),
+               let secKey = try? jwk.converted(to: SecKey.self) {
+                return ECKeyEncryption.EncryptionMode(keyManagementAlgorithm: self,
+                                                      contentEncryptionAlgorithm: contentEncryptionAlgorithm,
+                                                      recipientPublicKey: secKey,
+                                                      agreementPartyUInfo: agreementPartyUInfo ?? Data(),
+                                                      agreementPartyVInfo: agreementPartyVInfo ?? Data())
+            }
+            return nil
         case .PBES2_HS256_A128KW, .PBES2_HS384_A192KW, .PBES2_HS512_A256KW:
             guard let password = cast(encryptionKey, to: PBES2KeyEncryptionMode.KeyType.self) else {
                 return nil
@@ -132,15 +140,20 @@ extension KeyManagementAlgorithm {
 
             return DirectEncryptionMode(keyManagementAlgorithm: self, sharedSymmetricKey: sharedSymmetricKey)
         case .ECDH_ES, .ECDH_ES_A128KW, .ECDH_ES_A192KW, .ECDH_ES_A256KW:
-            guard let recipientPrivateKey = cast(decryptionKey, to: SecKey.self),
-                  isSecKeyPrivate(recipientPrivateKey) else {
-                return nil
+            // Accept SecKey directly (including Secure Enclave keys)
+            if let secKey = cast(decryptionKey, to: SecKey.self), isSecKeyPrivate(secKey) {
+                return ECKeyEncryption.DecryptionMode(keyManagementAlgorithm: self,
+                                                      contentEncryptionAlgorithm: contentEncryptionAlgorithm,
+                                                      recipientPrivateKey: secKey)
             }
-
-            return ECKeyEncryption.DecryptionMode(keyManagementAlgorithm: self,
-                                                  contentEncryptionAlgorithm: contentEncryptionAlgorithm,
-                                                  recipientPrivateKey: recipientPrivateKey
-            )
+            // Also accept ECPrivateKey (JWK) — convert to SecKey internally
+            if let jwk = cast(decryptionKey, to: ECPrivateKey.self),
+               let secKey = try? jwk.converted(to: SecKey.self) {
+                return ECKeyEncryption.DecryptionMode(keyManagementAlgorithm: self,
+                                                      contentEncryptionAlgorithm: contentEncryptionAlgorithm,
+                                                      recipientPrivateKey: secKey)
+            }
+            return nil
         case .PBES2_HS256_A128KW, .PBES2_HS384_A192KW, .PBES2_HS512_A256KW:
             guard let password = cast(decryptionKey, to: PBES2KeyEncryptionMode.KeyType.self) else {
                 return nil
